@@ -181,7 +181,7 @@ def encode(image : CMIFImage):
 def decode(data : bitarray):
     print("Decoding...")
 
-    data = data.to01()[:-2]
+    data = data.to01()
 
     bg = (
         int(data[:8], 2),
@@ -199,6 +199,8 @@ def decode(data : bitarray):
 
     image = {}
     while ptr < len(data):
+        if len(data[ptr:ptr + 24]) != 24: break
+
         cr = int(data[ptr:ptr + 8], 2)
         ptr += 8
         cg = int(data[ptr:ptr + 8], 2)
