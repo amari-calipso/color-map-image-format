@@ -1,4 +1,4 @@
-import pygame, sys, pickle, math
+import pygame, sys, math
 from bitarray import bitarray
 
 MAX_INDEX_BITS = 7
