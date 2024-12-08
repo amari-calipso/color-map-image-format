@@ -285,7 +285,7 @@ def display(screen : pygame.Surface, surf : pygame.Surface, scaleTo, image : CMI
 
 if __name__ == "__main__":
     if len(sys.argv) == 1:
-        print("Color Map Image Format utility v2022.4.8 - thatsOven")
+        print("Color Map Image Format utility v2022.4.8")
     elif sys.argv[1] == "convert":
         if "--dither" in sys.argv:
             idx = sys.argv.index("--dither")
